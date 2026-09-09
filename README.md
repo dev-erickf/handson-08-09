@@ -1,2 +1,2 @@
-# handson-08-09
+# handson
 exercícios de algoritmos e programação
