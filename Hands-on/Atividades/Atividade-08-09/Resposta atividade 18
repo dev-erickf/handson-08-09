@@ -1,0 +1,22 @@
+https://portugol.dev/#share=sre456g
+
+programa {
+  funcao inicio() {
+
+    // Nome, Idade, Cidade.
+    
+    cadeia nome, cidade
+		inteiro idade
+
+		escreva("Digite seu nome: ")
+		leia(nome)
+
+		escreva("Digite sua idade: ")
+		leia(idade)
+
+		escreva("Digite sua cidade: ")
+		leia(cidade)
+
+		escreva("Meu nome é ", nome, ", tenho ", idade, " anos e moro em ", cidade, ".")
+  }
+}
