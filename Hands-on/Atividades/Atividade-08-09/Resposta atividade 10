@@ -1,0 +1,18 @@
+https://portugol.dev/#share=2m7hwn3
+
+programa {
+  funcao inicio() {
+
+    // Armazene em uma variável lógica se ela é maior ou igual a 18 anos.
+    
+    inteiro idade
+		logico maiorDeIdade
+
+		escreva("Digite a idade: ")
+		leia(idade)
+
+		maiorDeIdade = idade >= 18
+
+		escreva("É maior de idade? ", maiorDeIdade)
+  }
+}
