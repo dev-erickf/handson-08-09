@@ -1,0 +1,17 @@
+https://portugol.dev/#share=kr22fa0
+
+programa {
+  funcao inicio() {
+
+    //  Leia uma variável lógica e mostre seu valor negado(Operador NÃO).
+    
+    logico valor, resultado
+
+		escreva("Digite o valor (sim ou nao): ")
+		leia(valor)
+
+		resultado = nao valor
+
+		escreva("Valor negado: ", resultado)
+  }
+}
