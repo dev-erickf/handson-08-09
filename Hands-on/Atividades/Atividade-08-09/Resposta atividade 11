@@ -1,0 +1,18 @@
+https://portugol.dev/#share=mt3vq2h
+
+programa {
+  funcao inicio() {
+
+    // Armazene em uma variável lógica se ele é for um número positivo.
+    
+    real numero
+		logico positivo
+
+		escreva("Digite um número: ")
+		leia(numero)
+
+		positivo = numero > 0
+
+		escreva("O número é positivo? ", positivo)
+  }
+}
