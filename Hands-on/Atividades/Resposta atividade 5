@@ -1,0 +1,17 @@
+https://portugol.dev/#share=0tp1i4o
+
+programa {
+  funcao inicio() {
+
+  // Tempertur de Celsius para Fahrenheit.
+
+    real celsius, fahrenheit
+
+		escreva("Digite a temperatura em Celsius: ")
+		leia(celsius)
+
+		fahrenheit = (celsius * 9 / 5) + 32
+
+		escreva("Temperatura em Fahrenheit é: ", fahrenheit)
+  }
+}
