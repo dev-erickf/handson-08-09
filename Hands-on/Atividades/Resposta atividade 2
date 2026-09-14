@@ -1,0 +1,17 @@
+https://portugol.dev/#share=q9848n9
+
+programa {
+  funcao inicio() {
+   inteiro numero, dobro, triplo
+   
+   // Dobro e Triplo de um número.
+
+    escreva("Digite um número que deseja saber o dobro e o triplo dele: ")
+     leia(numero)
+
+   dobro = numero * 2
+   triplo = numero * 3
+
+   escreva("O Dobro desse número é = ", dobro, " | O Triplo desse número é = ", triplo)
+  }
+  }
