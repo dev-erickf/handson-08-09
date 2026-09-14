@@ -1,0 +1,27 @@
+https://portugol.dev/#share=ec5t2ke
+
+programa {
+  funcao inicio() {
+
+    // Soma, Subtração, Multiplicação e Divisão de dois números.
+
+    real numero1, numero2
+		real soma, subtracao, multiplicacao, divisao
+
+		escreva("Digite o primeiro número: ")
+		leia(numero1)
+
+		escreva("Digite o segundo número: ")
+		leia(numero2)
+
+		soma = numero1 + numero2
+		subtracao = numero1 - numero2
+		multiplicacao = numero1 * numero2
+		divisao = numero1 / numero2
+
+		escreva("\nSoma: ", soma)
+		escreva("\nSubtração: ", subtracao)
+		escreva("\nMultiplicação: ", multiplicacao)
+		escreva("\nDivisão: ", divisao)
+  }
+}
