@@ -1,0 +1,18 @@
+https://portugol.dev/#share=o41b3n6
+
+programa {
+  funcao inicio() {
+
+    // Calcule a áre de um círculo.
+
+    real raio, area
+		real pi = 3.14
+
+		escreva("Digite o raio do círculo: ")
+		leia(raio)
+
+		area = pi * raio * raio
+
+		escreva("A área do círculo é: ", area)
+  }
+}
