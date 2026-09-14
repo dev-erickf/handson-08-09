@@ -1,0 +1,23 @@
+https://portugol.dev/#share=wunx5ak
+
+programa {
+  funcao inicio() {
+
+    // Leia três valores lógicos `a`, `b` e `c` e calcule.
+
+    logico a, b, c, resultado
+
+		escreva("Digite o valor de a (sim ou nao): ")
+		leia(a)
+
+		escreva("Digite o valor de b (sim ou nao): ")
+		leia(b)
+
+		escreva("Digite o valor de c (sim ou nao): ")
+		leia(c)
+
+		resultado = (a e b) ou c
+
+		escreva("Resultado de (A E B) OU C: ", resultado)
+  }
+}
