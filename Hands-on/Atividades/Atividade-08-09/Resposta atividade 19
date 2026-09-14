@@ -1,0 +1,20 @@
+https://portugol.dev/#share=3clpk9j
+
+programa {
+  funcao inicio() {
+
+    // Nome de usuário juntando os dois nomes.
+    
+    cadeia nome, sobrenome, usuario
+
+		escreva("Digite o primeiro nome: ")
+		leia(nome)
+
+		escreva("Digite o sobrenome: ")
+		leia(sobrenome)
+
+		usuario = nome + sobrenome
+
+		escreva("Nome de usuário: ", usuario)
+  }
+}
