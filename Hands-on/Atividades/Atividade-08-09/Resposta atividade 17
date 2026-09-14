@@ -1,0 +1,37 @@
+https://portugol.dev/#share=ump05y7
+
+programa {
+  funcao inicio() {
+
+    // Crie as quatro combinações possíveis entre `A` e `B` e mostre o resultado do operador `E` e operador `OU`.
+    
+    logico a, b
+
+		a = verdadeiro
+		b = verdadeiro
+		escreva("A = ", a, " | B = ", b)
+		escreva(" | A E B = ", a e b)
+		escreva(" | A OU B = ", a ou b)
+		escreva("\n")
+
+		a = verdadeiro
+		b = falso
+		escreva("A = ", a, " | B = ", b)
+		escreva(" | A E B = ", a e b)
+		escreva(" | A OU B = ", a ou b)
+		escreva("\n")
+
+		a = falso
+		b = verdadeiro
+		escreva("A = ", a, " | B = ", b)
+		escreva(" | A E B = ", a e b)
+		escreva(" | A OU B = ", a ou b)
+		escreva("\n")
+
+		a = falso
+		b = falso
+		escreva("A = ", a, " | B = ", b)
+		escreva(" | A E B = ", a e b)
+		escreva(" | A OU B = ", a ou b)
+  }
+}
