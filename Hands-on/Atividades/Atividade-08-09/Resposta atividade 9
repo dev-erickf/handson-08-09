@@ -1,0 +1,23 @@
+https://portugol.dev/#share=xe999i7
+
+programa {
+  funcao inicio() {
+
+    // Valor de uma compra e o percentual de desconto.
+    
+    real valorCompra, percentualDesconto
+		real valorDesconto, valorFinal
+
+		escreva("Digite o valor da compra: R$ ")
+		leia(valorCompra)
+
+		escreva("Digite o percentual de desconto: ")
+		leia(percentualDesconto)
+
+		valorDesconto = valorCompra * percentualDesconto / 100
+		valorFinal = valorCompra - valorDesconto
+
+		escreva("\nValor do desconto: R$ ", valorDesconto)
+		escreva("\nValor final da compra: R$ ", valorFinal)
+  }
+}
