@@ -1,0 +1,21 @@
+https://portugol.dev/#share=gky241z
+
+programa {
+  funcao inicio() {
+
+    // Valor consumido em um restaurante.
+
+    real valorConsumido, taxaServico, valorTotal, valorPessoa
+
+		escreva("Digite o valor total consumido: R$ ")
+		leia(valorConsumido)
+
+		taxaServico = valorConsumido * 0.10
+		valorTotal = valorConsumido + taxaServico
+		valorPessoa = valorTotal / 3
+
+		escreva("\nTaxa de serviço (10%): R$ ", taxaServico)
+		escreva("\nValor total da conta: R$ ", valorTotal)
+		escreva("\nValor por pessoa: R$ ", valorPessoa)
+  }
+}
