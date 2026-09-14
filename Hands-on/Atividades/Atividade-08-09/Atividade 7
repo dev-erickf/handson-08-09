@@ -1,0 +1,20 @@
+https://portugol.dev/#share=wdxzs98
+
+programa {
+  funcao inicio() {
+
+    // Distância percorrida por um veículo em quilômetros e a quantidade de litros de combustível utilizada.
+
+    real quilometros, litros, consumo
+
+		escreva("Digite a distância percorrida em quilômetros: ")
+		leia(quilometros)
+
+		escreva("Digite a quantidade de litros utilizada: ")
+		leia(litros)
+
+		consumo = quilometros / litros
+
+		escreva("O consumo médio é: ", consumo, " Km/l")
+  }
+}
