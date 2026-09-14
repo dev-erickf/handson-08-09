@@ -1,0 +1,24 @@
+https://portugol.dev/#share=k40tz6w
+
+programa {
+  funcao inicio() {
+
+    // Leia um número e verifique, usando uma expressão lógica, se ele está entre x e y.
+
+    real numero, x, y
+		logico estaEntre
+
+		escreva("Digite o número: ")
+		leia(numero)
+
+		escreva("Digite o valor de x: ")
+		leia(x)
+
+		escreva("Digite o valor de y: ")
+		leia(y)
+
+		estaEntre = numero >= x e numero <= y
+
+		escreva("O número está entre x e y? ", estaEntre)
+  }
+}
