@@ -1,0 +1,36 @@
+https://portugol.dev/#share=5d4gh9k
+
+programa {
+  funcao inicio() {
+
+    // Nome, Idade, Nota Final, Sexo ou Inicial do Gênero é Informação se está Matriculado(a).
+
+    cadeia nome
+		inteiro idade
+		real notaFinal
+		caracter sexo
+		logico matriculado
+
+		escreva("Digite o nome completo: ")
+		leia(nome)
+
+		escreva("Digite a idade: ")
+		leia(idade)
+
+		escreva("Digite a nota final: ")
+		leia(notaFinal)
+
+		escreva("Digite o sexo ou inicial do gênero: ")
+		leia(sexo)
+
+		escreva("Está matriculado? (sim ou nao): ")
+		leia(matriculado)
+
+		escreva("\nDADOS DO ALUNO")
+		escreva("\nNome: ", nome)
+		escreva("\nIdade: ", idade)
+		escreva("\nNota final: ", notaFinal)
+		escreva("\nSexo: ", sexo)
+		escreva("\nMatriculado: ", matriculado)
+  }
+}
