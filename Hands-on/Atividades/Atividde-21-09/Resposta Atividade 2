@@ -1,0 +1,23 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+       System.out.print("Digite o ano atual: ");
+        int anoAtual = entrada.nextInt();
+
+        System.out.print("Digite o ano do seu nascimento: ");
+        int anoNascimento = entrada.nextInt();
+
+        int idade = anoAtual - anoNascimento;
+
+        System.out.println("Sua idade é: " + idade);
+
+        System.out.println("Sua idade em 2050 será: " + (2050 - anoNascimento));
+
+        entrada.close();
+    }
+    
+}
