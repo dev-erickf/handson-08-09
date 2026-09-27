@@ -1,0 +1,21 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+       System.out.print("Digite o valor que você tem em dólar: ");
+        double valorDolar = entrada.nextDouble();
+
+        System.out.print("Digite o valor do dólar: ");
+        double cotacaoDolar = entrada.nextDouble();
+
+        double valorReal = valorDolar * cotacaoDolar;
+
+        System.out.println("O valor em reais é: R$ " + valorReal);
+
+        entrada.close();
+    }
+    
+}
