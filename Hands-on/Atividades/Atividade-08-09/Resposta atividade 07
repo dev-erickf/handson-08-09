@@ -16,5 +16,6 @@ programa {
 		consumo = quilometros / litros
 
 		escreva("O consumo médio é: ", consumo, " Km/l")
+
   }
 }
