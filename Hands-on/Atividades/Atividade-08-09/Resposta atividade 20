@@ -32,5 +32,6 @@ programa {
 		escreva("\nNota final: ", notaFinal)
 		escreva("\nSexo: ", sexo)
 		escreva("\nMatriculado: ", matriculado)
+
   }
 }
