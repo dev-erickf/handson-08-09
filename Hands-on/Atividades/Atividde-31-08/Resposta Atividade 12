@@ -1,0 +1,19 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Informe sua altura em metros: ");
+        double altura = entrada.nextDouble();
+
+        double pesoIdeal = (72.7 * altura) - 58;
+
+        System.out.printf("Seu peso ideal para um homem com essa altura é: %.2f kg%n", pesoIdeal);
+
+        entrada.close();
+
+    }
+    
+}
