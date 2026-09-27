@@ -1,0 +1,25 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Informe o valor de A: ");
+        int a = entrada.nextInt();
+
+        System.out.print("Informe o valor de B: ");
+        int b = entrada.nextInt();
+
+        int auxiliar = a;
+        a = b;
+        b = auxiliar;
+
+        System.out.println("O valor de A é: " + a);
+        System.out.println("O valor de B é: " + b);
+
+        entrada.close();
+
+    }
+    
+}
