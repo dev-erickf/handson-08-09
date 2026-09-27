@@ -1,0 +1,32 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+         System.out.print("Informe a primeira nota do aluno: ");
+        double nota1 = entrada.nextDouble();
+
+        System.out.print("Informe a segunda nota do aluno: ");
+        double nota2 = entrada.nextDouble();
+
+        double media = (nota1 + nota2) / 2;
+
+        System.out.printf("A média do aluno é: %.2f%n", media);
+
+        if (media >= 7) {
+            System.out.println("O aluno foi aprovado.");
+
+        // } else if (media >= 5) {
+            // System.out.println("O aluno está de recuperação."); caso pedido para considerar a recuperação.
+
+        } else {
+            System.out.println("O aluno foi reprovado.");
+        }
+
+        entrada.close();
+
+    }
+    
+}
