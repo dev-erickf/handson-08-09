@@ -1,0 +1,36 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+       System.out.print("Informe o coeficiente a: ");
+        double a = entrada.nextDouble();
+
+        System.out.print("Informe o coeficiente b: ");
+        double b = entrada.nextDouble(); 
+
+        System.out.print("Informe o coeficiente c: ");
+        double c = entrada.nextDouble();
+
+        double delta = (b * b) - (4 * a * c);
+
+        if (delta < 0) {
+            System.out.println("Não existem raízes reais.");
+
+        } else if (delta == 0) {
+            double raiz = -b / (2 * a);
+            System.out.println("Existe uma raiz real: " + raiz);
+            
+        } else {
+            double raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+            double raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+            System.out.println("Existem duas raízes reais: " + raiz1 + " e " + raiz2);
+        }
+
+        entrada.close();
+
+    }
+    
+}
