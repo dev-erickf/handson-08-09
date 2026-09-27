@@ -20,5 +20,6 @@ programa {
 		estaEntre = numero >= x e numero <= y
 
 		escreva("O número está entre x e y? ", estaEntre)
+
   }
 }
