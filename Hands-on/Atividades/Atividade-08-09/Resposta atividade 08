@@ -17,5 +17,6 @@ programa {
 		escreva("\nTaxa de serviço (10%): R$ ", taxaServico)
 		escreva("\nValor total da conta: R$ ", valorTotal)
 		escreva("\nValor por pessoa: R$ ", valorPessoa)
+
   }
 }
