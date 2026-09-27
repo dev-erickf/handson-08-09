@@ -1,0 +1,27 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Informe um número inteiro: ");
+        int numero = entrada.nextInt();
+
+        int antecessor = numero - 1;
+        System.out.println("O antecessor de " + numero + " é: " + antecessor);
+
+        int sucessor = numero + 1;
+        System.out.println("O sucessor de " + numero + " é: " + sucessor);
+
+        int dobro = numero * 2;
+        System.out.println("O dobro de " + numero + " é: " + dobro);
+
+        double metade = numero / 2.0;
+        System.out.println("A metade de " + numero + " é: " + metade);
+
+        entrada.close();
+
+    }
+    
+}
