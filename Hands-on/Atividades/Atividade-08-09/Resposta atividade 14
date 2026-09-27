@@ -16,5 +16,6 @@ programa {
 		resultado = a ou b
 
 		escreva("Resultado de a ou b: ", resultado)
+
   }
 }
