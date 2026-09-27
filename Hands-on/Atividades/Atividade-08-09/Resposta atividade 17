@@ -33,5 +33,6 @@ programa {
 		escreva("A = ", a, " | B = ", b)
 		escreva(" | A E B = ", a e b)
 		escreva(" | A OU B = ", a ou b)
+
   }
 }
