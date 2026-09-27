@@ -1,0 +1,21 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+       System.out.print("Digite o valor da diagonal maior: ");
+        double diagonalMaior = entrada.nextDouble();
+
+        System.out.print("Digite o valor da diagonal menor: ");
+        double diagonalMenor = entrada.nextDouble();
+
+        double area = diagonalMaior * diagonalMenor / 2;
+
+        System.out.println("A área do losango é: " + area);
+
+        entrada.close();
+    }
+    
+}
