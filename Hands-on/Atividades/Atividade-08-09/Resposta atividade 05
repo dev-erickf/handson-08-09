@@ -13,5 +13,6 @@ programa {
 		fahrenheit = (celsius * 9 / 5) + 32
 
 		escreva("Temperatura em Fahrenheit é: ", fahrenheit)
+
   }
 }
