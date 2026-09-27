@@ -3,8 +3,8 @@ Estrutura Sequencial
 
 1- Leia três números inteiros e imprima a média aritmética entre esses números.
 2- Faça um programa que receba o ano de nascimento de uma pessoa, o ano atual e imprima:
-a) A idade da pessoa no ano atual
-b) A idade que a pessoa terá em 2050
+a) A idade da pessoa no ano atual.
+b) A idade que a pessoa terá em 2050.
 3- Faça um programa que receba a cotação do dólar em reais, e um valor que o usuário possui em dólares. Imprima este valor em reais.
 4- Faça um programa que calcule e mostre a área de um losango AREA = (DIAGONAL MAIOR * DIAGONAL MENOR)/2
 5- Faça um programa que receba uma temperatura em Celsius, calcule e mostre essa temperatura em Fahrenheit (F = (C*1,8) + 32)
