@@ -19,5 +19,6 @@ programa {
 		resultado = (a e b) ou c
 
 		escreva("Resultado de (A E B) OU C: ", resultado)
+
   }
 }
