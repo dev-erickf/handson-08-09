@@ -1,0 +1,41 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Informe o valor de a: ");
+        double a = entrada.nextDouble();
+
+        System.out.print("Informe o valor de b: ");
+        double b = entrada.nextDouble();
+
+        System.out.print("Informe o valor de c: ");
+        double c = entrada.nextDouble();
+
+        double delta = (b * b) - (4 * a * c);
+
+        System.out.printf("Delta = %.2f%n", delta);
+
+        if (delta < 0) {
+            System.out.println("Não existe raiz real."); 
+
+        } else if (delta == 0) {
+            double x = -b / (2 * a);
+            System.out.printf("Existe somente uma raiz real: x = %.2f%n", x);
+
+        } else {
+            double x1 = (-b + Math.sqrt(delta)) / (2 * a);
+            double x2 = (-b - Math.sqrt(delta)) / (2 * a);
+
+            System.out.printf("Existem duas raízes reais:%n");
+            System.out.printf("x1 = %.2f%n", x1);
+            System.out.printf("x2 = %.2f%n", x2);
+        }
+
+        entrada.close();
+
+    }
+    
+}
