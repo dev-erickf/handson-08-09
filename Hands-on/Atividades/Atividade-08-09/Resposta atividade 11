@@ -14,5 +14,6 @@ programa {
 		positivo = numero > 0
 
 		escreva("O número é positivo? ", positivo)
+
   }
 }
