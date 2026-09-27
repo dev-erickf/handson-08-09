@@ -1,0 +1,22 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Informe o valor da conta: ");
+        double valorConta = entrada.nextDouble();
+
+        double taxaGarcom = valorConta * 0.10;
+        double valorTotal = valorConta + taxaGarcom;
+
+        System.out.printf("O valor da taxa do garçom é: R$ %.2f%n", taxaGarcom);
+
+        System.out.printf("O valor total da conta é: R$ %.2f%n", valorTotal);
+
+        entrada.close();
+
+    }
+    
+}
