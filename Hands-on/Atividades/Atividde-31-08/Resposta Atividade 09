@@ -1,0 +1,31 @@
+package atividade.mark;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+       System.out.print("Informe um número positivo: ");
+        int numero = entrada.nextInt();
+
+        int quadrado = numero * numero;
+
+        System.out.println("O quadrado do número " + numero + " é: " + quadrado);
+
+        int cubo = numero * numero * numero;
+
+        System.out.println("O cubo do número " + numero + " é: " + cubo);
+
+        double raizQuadrada = Math.sqrt(numero);
+
+        System.out.printf("A raiz quadrada do número %d é: %.2f%n", numero, raizQuadrada);
+
+        double raizCubica = Math.cbrt(numero);
+
+        System.out.printf("A raiz cúbica do número %d é: %.2f%n", numero, raizCubica);
+
+        entrada.close();
+
+    }
+    
+}
