@@ -13,5 +13,6 @@ programa {
 		resultado = nao valor
 
 		escreva("Valor negado: ", resultado)
+
   }
 }
