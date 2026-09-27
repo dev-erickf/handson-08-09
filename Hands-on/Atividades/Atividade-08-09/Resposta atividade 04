@@ -23,5 +23,6 @@ programa {
 		escreva("\nSubtração: ", subtracao)
 		escreva("\nMultiplicação: ", multiplicacao)
 		escreva("\nDivisão: ", divisao)
+
   }
 }
