@@ -18,5 +18,6 @@ programa {
         media = (nota1 + nota2 + nota3) / 3
 
         escreva("A média aritmética é: ", media)
+
   }
 }
