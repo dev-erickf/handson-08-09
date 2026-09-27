@@ -19,6 +19,7 @@ public class Main {
         System.out.println("A média é: " + media);
 
         entrada.close();
+
     }
     
 }
