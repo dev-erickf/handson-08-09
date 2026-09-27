@@ -19,5 +19,6 @@ programa {
 
 		escreva("\nValor do desconto: R$ ", valorDesconto)
 		escreva("\nValor final da compra: R$ ", valorFinal)
+
   }
 }
