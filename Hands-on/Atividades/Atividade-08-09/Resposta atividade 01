@@ -13,5 +13,6 @@ programa {
    sucessor = numero + 1
 
    escreva("O antecessor é = ", antecessor, " | O sucessor é = ", sucessor)
+
   }
 }
