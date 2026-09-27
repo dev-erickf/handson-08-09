@@ -1,0 +1,52 @@
+package atividade.rafaela;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.println("=== CALCULADORA ===");
+        System.out.println("1 - Somar");
+        System.out.println("2 - Subtrair");
+        System.out.println("3 - Multiplicar");
+        System.out.println("4 - Dividir");
+
+        System.out.print("Escolha uma opção: ");
+        int opcao = entrada.nextInt();
+
+        System.out.print("Informe o primeiro número: ");
+        double numero1 = entrada.nextDouble();
+
+        System.out.print("Informe o segundo número: ");
+        double numero2 = entrada.nextDouble();
+
+        switch (opcao) {
+            case 1:
+                System.out.printf("Resultado da soma: %.2f%n", (numero1 + numero2));
+                break;
+
+            case 2:
+                System.out.printf("Resultado da subtração: %.2f%n", (numero1 - numero2));
+                break;
+
+            case 3:
+                System.out.printf("Resultado da multiplicação: %.2f%n", (numero1 * numero2));
+                break;
+
+            case 4:
+                if (numero2 == 0) {
+                    System.out.println("Não é possível dividir por zero.");
+                } else {
+                    System.out.printf("Resultado da divisão: %.2f%n", (numero1 / numero2));
+                }
+                break;
+
+            default:
+                System.out.println("Opção inválida.");
+        }
+          
+        entrada.close();
+
+    }
+    
+}
