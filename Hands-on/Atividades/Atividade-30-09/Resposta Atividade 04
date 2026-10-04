@@ -1,0 +1,50 @@
+package atividade.rafaela;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int idade;
+        int ingresso;
+        int responsavel;
+
+        System.out.println("Digite sua idade:");
+        idade = entrada.nextInt();
+
+        System.out.println("Possui ingresso?");
+        System.out.println("1 - Sim");
+        System.out.println("2 - Não");
+        ingresso = entrada.nextInt();
+
+        while (ingresso != 1 && ingresso != 2) {
+            System.out.println("Opção inválida. Digite 1 para Sim ou 2 para Não.");
+            ingresso = entrada.nextInt();
+        }
+
+        if (ingresso == 2) {
+            System.out.println("Entrada negada: ingresso obrigatório.");
+        } else if (idade >= 18) {
+            System.out.println("Entrada liberada!");
+        } else {
+            System.out.println("Está acompanhado de um responsável?");
+            System.out.println("1 - Sim");
+            System.out.println("2 - Não");
+            responsavel = entrada.nextInt();
+
+            while (responsavel != 1 && responsavel != 2) {
+                System.out.println("Opção inválida. Digite 1 para Sim ou 2 para Não.");
+                responsavel = entrada.nextInt();
+            }
+
+            if (responsavel == 1) {
+                System.out.println("Entrada liberada!");
+            } else {
+                System.out.println("Entrada negada.");
+            }
+        }
+        
+
+        entrada.close();
+    }
+}
