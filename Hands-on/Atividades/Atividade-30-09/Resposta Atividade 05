@@ -1,0 +1,51 @@
+package atividade.rafaela;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double dinheiro;
+        int chuva;
+        int idade;
+
+        System.out.println("Quanto dinheiro você possui?");
+        dinheiro = entrada.nextDouble();
+
+        if (dinheiro < 20.00) {
+            System.out.println("Rolê em casa.");
+        } else if (dinheiro >= 20 && dinheiro <= 49) {
+
+            System.out.println("Está chovendo?");
+            System.out.println("1 - Sim");
+            System.out.println("2 - Não");
+            chuva = entrada.nextInt();
+
+            while (chuva != 1 && chuva != 2) {
+                System.out.println("Opção inválida. Digite 1 para Sim ou 2 para Não.");
+                chuva = entrada.nextInt();
+            }
+
+            if (chuva == 1) {
+                System.out.println("Streaming + comida.");
+            } else {
+                System.out.println("Praça ou parque.");
+            }
+
+        } else if (dinheiro >= 50 && dinheiro <= 99) {
+            System.out.println("Cinema.");
+
+        } else {
+            System.out.println("Digite sua idade:");
+            idade = entrada.nextInt();
+
+            if (idade < 18) {
+                System.out.println("Shopping + cinema.");
+            } else {
+                System.out.println("Show, restaurante ou churrasco com a galera.");
+            }
+        }
+
+        entrada.close();
+    }
+}
