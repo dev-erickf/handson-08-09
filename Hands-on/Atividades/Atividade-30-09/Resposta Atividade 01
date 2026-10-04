@@ -1,0 +1,48 @@
+package atividade.rafaela;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        System.out.print("Informe a idade do jogador: ");
+        int idade = entrada.nextInt();
+
+        while (idade < 0) {
+            System.out.println("A idade não pode ser negativa.");
+            System.out.print("Informe a idade novamente: ");
+            idade = entrada.nextInt();
+        }
+
+        System.out.print("Informe a quantidade de horas jogadas por semana: ");
+        int horas = entrada.nextInt();
+
+        while (horas < 0) {
+            System.out.println("As horas não podem ser negativas.");
+            System.out.print("Informe as horas novamente: ");
+            horas = entrada.nextInt();
+        }
+
+        if (idade < 12) {
+            System.out.println("Jogador Mirim");
+
+        } else if (idade <= 17) {
+            if (horas <= 10) {
+                System.out.println("Jogador Casual");
+            } else {
+                System.out.println("Jogador Frequente");
+            }
+
+        } else {
+            if (horas <= 5) {
+                System.out.println("Jogador Casual");
+            } else if (horas <= 15) {
+                System.out.println("Jogador Gamer");
+            } else {
+                System.out.println("Gamer Hardcore");
+            }
+        }
+
+        entrada.close();
+    }
+}
