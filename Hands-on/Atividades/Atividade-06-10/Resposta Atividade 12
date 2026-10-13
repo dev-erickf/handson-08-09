@@ -1,0 +1,57 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int idade;
+        int maiorIdade = -1;
+        int mulheresDesejadas = 0;
+
+        System.out.print("Digite a idade (-1 para encerrar): ");
+        idade = entrada.nextInt();
+
+        while (idade != -1) {
+            if (idade < 0) {
+                System.out.println("Idade inválida.");
+            } else {
+                System.out.print("Sexo (M/F): ");
+                String sexo = entrada.next().toUpperCase();
+
+                System.out.print("Cor dos olhos (azuis/verdes/castanhos): ");
+                String olhos = entrada.next().toLowerCase();
+
+                System.out.print("Cor dos cabelos (louros/castanhos/pretos): ");
+                String cabelos = entrada.next().toLowerCase();
+
+                if (idade > maiorIdade) {
+                    maiorIdade = idade;
+                }
+
+                if (sexo.equals("F")
+                        && idade >= 18 && idade <= 35
+                        && olhos.equals("verdes")
+                        && cabelos.equals("louros")) {
+                    mulheresDesejadas++;
+                }
+            }
+
+            System.out.print("Digite a idade (-1 para encerrar): ");
+            idade = entrada.nextInt();
+        }
+
+        if (maiorIdade == -1) {
+            System.out.println("Nenhuma pessoa foi pesquisada.");
+        } else {
+            System.out.println("Maior idade: " + maiorIdade);
+        }
+
+        System.out.println(
+                "Quantidade de mulheres de 18 a 35 anos, com olhos verdes e cabelos louros: "
+                + mulheresDesejadas);
+
+        entrada.close();
+    }
+}
