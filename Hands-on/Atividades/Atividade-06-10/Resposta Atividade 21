@@ -1,0 +1,92 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        final double SALARIO_MINIMO = 1621.00;
+
+        for (int i = 1; i <= 10; i++) {
+            System.out.println("\nFuncionário " + i + " de 10");
+
+            System.out.print("Código: ");
+            int codigo = entrada.nextInt();
+
+            System.out.print("Horas trabalhadas no mês: ");
+            double horas = entrada.nextDouble();
+
+            char turno;
+
+            do {
+                System.out.print("Turno (M/V/N): ");
+                turno = entrada.next().toUpperCase().charAt(0);
+
+                if (turno != 'M' && turno != 'V' && turno != 'N') {
+                    System.out.println("Turno inválido. Digite M, V ou N.");
+                }
+            } while (turno != 'M' && turno != 'V' && turno != 'N');
+
+            char categoria;
+
+            do {
+                System.out.print("Categoria (O/G): ");
+                categoria = entrada.next().toUpperCase().charAt(0);
+
+                if (categoria != 'O' && categoria != 'G') {
+                    System.out.println("Categoria inválida. Digite O ou G.");
+                }
+            } while (categoria != 'O' && categoria != 'G');
+
+            double percentualHora;
+
+            if (categoria == 'G' && turno == 'N') {
+                percentualHora = 0.18;
+            } else if (categoria == 'G') {
+                percentualHora = 0.15;
+            } else if (turno == 'N') {
+                percentualHora = 0.13;
+            } else {
+                percentualHora = 0.10;
+            }
+
+            double valorHora = SALARIO_MINIMO * percentualHora;
+            double salarioInicial = horas * valorHora;
+
+            double percentualAuxilio;
+
+            if (salarioInicial <= 1080.00) {
+                percentualAuxilio = 0.20;
+            } else if (salarioInicial <= 2160.00) {
+                percentualAuxilio = 0.15;
+            } else {
+                percentualAuxilio = 0.05;
+            }
+
+            double auxilio = salarioInicial * percentualAuxilio;
+            double salarioFinal = salarioInicial + auxilio;
+
+            System.out.println("\n--- Resultado do funcionário ---");
+            System.out.println("Código: " + codigo);
+
+            System.out.printf(Locale.US,
+                    "Horas trabalhadas: %.2f%n", horas);
+
+            System.out.printf(Locale.US,
+                    "Valor da hora: R$ %.2f%n", valorHora);
+
+            System.out.printf(Locale.US,
+                    "Salário inicial: R$ %.2f%n", salarioInicial);
+
+            System.out.printf(Locale.US,
+                    "Auxílio-alimentação: R$ %.2f%n", auxilio);
+
+            System.out.printf(Locale.US,
+                    "Salário final: R$ %.2f%n", salarioFinal);
+        }
+
+        entrada.close();
+    }
+}
