@@ -1,0 +1,29 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int n;
+
+        do {
+            System.out.print("Digite um número inteiro positivo : ");
+            n = entrada.nextInt();
+        } while (n <= 0);
+
+        double e = 1.0;
+        double fatorial = 1.0;
+
+        for (int i = 1; i <= n; i++) {
+            fatorial = fatorial * i;
+            e = e + 1.0 / fatorial;
+        }
+
+        System.out.printf(Locale.US, "E = %.6f%n", e);
+
+        entrada.close();
+    }
+}
