@@ -1,0 +1,43 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int n;
+
+        do {
+            System.out.print("Quantidade de termos N: ");
+            n = entrada.nextInt();
+        } while (n <= 0);
+
+        System.out.print("Primeiro termo A1: ");
+        int a1 = entrada.nextInt();
+
+        System.out.print("Razão R: ");
+        int r = entrada.nextInt();
+
+        long termo = a1;
+        long soma = 0;
+
+        System.out.print("PA: ");
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(termo);
+
+            if (i < n) {
+                System.out.print(" ");
+            }
+
+            soma += termo;
+            termo += r;
+        }
+
+        System.out.println();
+        System.out.println("Soma = " + soma);
+
+        entrada.close();
+    }
+}
