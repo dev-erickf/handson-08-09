@@ -1,0 +1,58 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int candidato1 = 0;
+        int candidato2 = 0;
+        int candidato3 = 0;
+        int candidato4 = 0;
+        int nulos = 0;
+        int brancos = 0;
+
+        int voto;
+
+        System.out.print("Digite o voto (0 para encerrar): ");
+        voto = entrada.nextInt();
+
+        while (voto != 0) {
+            switch (voto) {
+                case 1:
+                    candidato1++;
+                    break;
+                case 2:
+                    candidato2++;
+                    break;
+                case 3:
+                    candidato3++;
+                    break;
+                case 4:
+                    candidato4++;
+                    break;
+                case 5:
+                    nulos++;
+                    break;
+                case 6:
+                    brancos++;
+                    break;
+                default:
+                    System.out.println("Código de voto inválido.");
+            }
+
+            System.out.print("Digite o voto (0 para encerrar): ");
+            voto = entrada.nextInt();
+        }
+
+        System.out.println("Total de votos do candidato 1: " + candidato1);
+        System.out.println("Total de votos do candidato 2: " + candidato2);
+        System.out.println("Total de votos do candidato 3: " + candidato3);
+        System.out.println("Total de votos do candidato 4: " + candidato4);
+        System.out.println("Total de votos nulos: " + nulos);
+        System.out.println("Total de votos em branco: " + brancos);
+
+        entrada.close();
+    }
+}
