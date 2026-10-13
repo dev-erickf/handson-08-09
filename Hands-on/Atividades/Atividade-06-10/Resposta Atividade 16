@@ -1,0 +1,42 @@
+package atividade.rafaela;
+
+public class Main {
+
+    public static boolean ehPrimo(long numero) {
+        if (numero < 2) {
+            return false;
+        }
+
+        for (long divisor = 2; divisor <= numero / divisor; divisor++) {
+            if (numero % divisor == 0) {
+                return false;
+            }
+        }
+
+        return true;
+    }
+
+    public static void main(String[] args) {
+        int encontrados = 0;
+        int p = 2;
+
+        while (encontrados < 5) {
+            long potencia = 1;
+
+            for (int i = 0; i < p; i++) {
+                potencia *= 2;
+            }
+
+            long mersenne = potencia - 1;
+
+            if (ehPrimo(p) && ehPrimo(mersenne)) {
+                long perfeito = (potencia / 2) * mersenne;
+
+                System.out.println(perfeito);
+                encontrados++;
+            }
+
+            p++;
+        }
+    }
+}
