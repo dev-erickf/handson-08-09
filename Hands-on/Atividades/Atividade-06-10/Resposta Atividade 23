@@ -1,0 +1,103 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        final double SALARIO_MINIMO = 1621.00;
+
+        double folha = 0.0;
+        int totalPecas = 0;
+
+        int pecasHomens = 0;
+        int homens = 0;
+
+        int pecasMulheres = 0;
+        int mulheres = 0;
+
+        double maiorSalario = -1.0;
+        int codigoMaiorSalario = 0;
+
+        for (int i = 1; i <= 15; i++) {
+            System.out.println("\nOperário " + i + " de 15");
+
+            System.out.print("Número do operário: ");
+            int codigo = entrada.nextInt();
+
+            int pecas;
+
+            do {
+                System.out.print("Peças produzidas: ");
+                pecas = entrada.nextInt();
+            } while (pecas < 0);
+
+            char sexo;
+
+            do {
+                System.out.print("Sexo (M/F): ");
+                sexo = entrada.next().toUpperCase().charAt(0);
+            } while (sexo != 'M' && sexo != 'F');
+
+            double salario;
+
+            if (pecas <= 30) {
+                salario = SALARIO_MINIMO;
+            } else if (pecas <= 50) {
+                salario = SALARIO_MINIMO
+                        + (pecas - 30) * 0.03 * SALARIO_MINIMO;
+            } else {
+                salario = SALARIO_MINIMO
+                        + (pecas - 30) * 0.05 * SALARIO_MINIMO;
+            }
+
+            System.out.printf(Locale.US,
+                    "Operário %d | Salário: R$ %.2f%n",
+                    codigo, salario);
+
+            folha += salario;
+            totalPecas += pecas;
+
+            if (sexo == 'M') {
+                homens++;
+                pecasHomens += pecas;
+            } else {
+                mulheres++;
+                pecasMulheres += pecas;
+            }
+
+            if (salario > maiorSalario) {
+                maiorSalario = salario;
+                codigoMaiorSalario = codigo;
+            }
+        }
+
+        System.out.printf(Locale.US,
+                "%nTotal da folha de pagamento: R$ %.2f%n", folha);
+
+        System.out.println("Quantidade total de peças: " + totalPecas);
+
+        if (homens > 0) {
+            System.out.printf(Locale.US,
+                    "Média de peças dos homens: %.2f%n",
+                    (double) pecasHomens / homens);
+        } else {
+            System.out.println("Não há homens na pesquisa.");
+        }
+
+        if (mulheres > 0) {
+            System.out.printf(Locale.US,
+                    "Média de peças das mulheres: %.2f%n",
+                    (double) pecasMulheres / mulheres);
+        } else {
+            System.out.println("Não há mulheres na pesquisa.");
+        }
+
+        System.out.println(
+                "Operário(a) com maior salário: " + codigoMaiorSalario);
+
+        entrada.close();
+    }
+}
