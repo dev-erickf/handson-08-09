@@ -1,0 +1,53 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int faixa1 = 0;
+        int faixa2 = 0;
+        int faixa3 = 0;
+        int faixa4 = 0;
+        int faixa5 = 0;
+
+        for (int i = 1; i <= 15; i++) {
+            int idade;
+
+            do {
+                System.out.print("Digite a idade da pessoa " + i + ": ");
+                idade = entrada.nextInt();
+            } while (idade < 0);
+
+            if (idade <= 15) {
+                faixa1++;
+            } else if (idade <= 30) {
+                faixa2++;
+            } else if (idade <= 45) {
+                faixa3++;
+            } else if (idade <= 60) {
+                faixa4++;
+            } else {
+                faixa5++;
+            }
+        }
+
+        System.out.println("Faixa 1 (até 15 anos): " + faixa1);
+        System.out.println("Faixa 2 (16 a 30 anos): " + faixa2);
+        System.out.println("Faixa 3 (31 a 45 anos): " + faixa3);
+        System.out.println("Faixa 4 (46 a 60 anos): " + faixa4);
+        System.out.println("Faixa 5 (61 anos ou mais): " + faixa5);
+
+        System.out.printf(Locale.US,
+                "Percentual da primeira faixa: %.2f%%%n",
+                faixa1 / 15.0 * 100);
+
+        System.out.printf(Locale.US,
+                "Percentual da última faixa: %.2f%%%n",
+                faixa5 / 15.0 * 100);
+
+        entrada.close();
+    }
+}
