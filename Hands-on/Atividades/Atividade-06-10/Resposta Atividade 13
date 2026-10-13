@@ -1,0 +1,50 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int codigo;
+        int quantidade = 0;
+        double somaAntes = 0;
+        double somaDepois = 0;
+
+        System.out.print("Código do produto (negativo para encerrar): ");
+        codigo = entrada.nextInt();
+
+        while (codigo >= 0) {
+            System.out.print("Preço atual: R$ ");
+            double preco = entrada.nextDouble();
+
+            double novoPreco = preco * 1.20;
+
+            System.out.printf(Locale.US,
+                    "Código: %d | Novo preço: R$ %.2f%n",
+                    codigo, novoPreco);
+
+            somaAntes += preco;
+            somaDepois += novoPreco;
+            quantidade++;
+
+            System.out.print("Código do produto (negativo para encerrar): ");
+            codigo = entrada.nextInt();
+        }
+
+        if (quantidade == 0) {
+            System.out.println("Nenhum produto foi informado.");
+        } else {
+            System.out.printf(Locale.US,
+                    "Média dos preços antes do aumento: R$ %.2f%n",
+                    somaAntes / quantidade);
+
+            System.out.printf(Locale.US,
+                    "Média dos preços após o aumento: R$ %.2f%n",
+                    somaDepois / quantidade);
+        }
+
+        entrada.close();
+    }
+}
