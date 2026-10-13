@@ -1,0 +1,37 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int n;
+
+        do {
+            System.out.print("Digite um número inteiro positivo : ");
+            n = entrada.nextInt();
+        } while (n <= 0);
+
+        double soma = 0;
+
+        for (int i = 1; i <= n; i++) {
+            if (i > 1) {
+                System.out.print(" + ");
+            }
+
+            if (i == 1) {
+                System.out.print("1");
+            } else {
+                System.out.print("1/" + i);
+            }
+
+            soma += 1.0 / i;
+        }
+
+        System.out.printf(Locale.US, "%nS = %.2f%n", soma);
+
+        entrada.close();
+    }
+}
