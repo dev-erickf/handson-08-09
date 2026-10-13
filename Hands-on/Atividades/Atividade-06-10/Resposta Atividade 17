@@ -1,0 +1,56 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int maiorAcidentes = 0;
+        int menorAcidentes = 0;
+        int codigoMaior = 0;
+        int codigoMenor = 0;
+        long somaVeiculos = 0;
+
+        for (int i = 1; i <= 200; i++) {
+            System.out.println("Cidade " + i + " de 200");
+
+            System.out.print("Código da cidade: ");
+            int codigo = entrada.nextInt();
+
+            System.out.print("Estado (sigla): ");
+            String estado = entrada.next();
+
+            System.out.print("Número de veículos de passeio: ");
+            int veiculos = entrada.nextInt();
+
+            System.out.print("Número de acidentes com vítimas: ");
+            int acidentes = entrada.nextInt();
+
+            somaVeiculos += veiculos;
+
+            if (i == 1 || acidentes > maiorAcidentes) {
+                maiorAcidentes = acidentes;
+                codigoMaior = codigo;
+            }
+
+            if (i == 1 || acidentes < menorAcidentes) {
+                menorAcidentes = acidentes;
+                codigoMenor = codigo;
+            }
+        }
+
+        System.out.println("Maior número de acidentes: " + maiorAcidentes);
+        System.out.println("Código da cidade com mais acidentes: " + codigoMaior);
+
+        System.out.println("Menor número de acidentes: " + menorAcidentes);
+        System.out.println("Código da cidade com menos acidentes: " + codigoMenor);
+
+        System.out.printf(Locale.US,
+                "Média de veículos: %.2f%n",
+                somaVeiculos / 200.0);
+
+        entrada.close();
+    }
+}
