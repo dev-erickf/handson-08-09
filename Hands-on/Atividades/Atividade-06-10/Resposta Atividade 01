@@ -1,0 +1,45 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int numero;
+        int maior = 0;
+        int menor = 0;
+        boolean primeiro = true;
+
+        System.out.print("Digite um número inteiro (0 para parar): ");
+        numero = entrada.nextInt();
+
+        while (numero != 0) {
+            if (primeiro) {
+                maior = numero;
+                menor = numero;
+                primeiro = false;
+            } else {
+                if (numero > maior) {
+                    maior = numero;
+                }
+
+                if (numero < menor) {
+                    menor = numero;
+                }
+            }
+
+            System.out.print("Digite um número inteiro (0 para parar): ");
+            numero = entrada.nextInt();
+        }
+
+        if (primeiro) {
+            System.out.println("Nenhum número foi digitado.");
+        } else {
+            System.out.println("Maior número: " + maior);
+            System.out.println("Menor número: " + menor);
+        }
+
+        entrada.close();
+    }
+}
