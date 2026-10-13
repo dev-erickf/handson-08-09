@@ -1,0 +1,148 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        double somaAdicionais = 0.0;
+        double somaImpostos = 0.0;
+
+        double maiorFinal = 0.0;
+        double menorFinal = 0.0;
+
+        int baratos = 0;
+        int normais = 0;
+        int caros = 0;
+
+        for (int i = 1; i <= 12; i++) {
+            System.out.println("\nProduto " + i + " de 12");
+
+            double preco;
+
+            do {
+                System.out.print("Preço unitário: R$ ");
+                preco = entrada.nextDouble();
+            } while (preco < 0);
+
+            char refrigeracao;
+
+            do {
+                System.out.print("Precisa de refrigeração? (S/N): ");
+                refrigeracao = entrada.next().toUpperCase().charAt(0);
+            } while (refrigeracao != 'S' && refrigeracao != 'N');
+
+            char categoria;
+
+            do {
+                System.out.print("Categoria (A/L/V): ");
+                categoria = entrada.next().toUpperCase().charAt(0);
+            } while (categoria != 'A'
+                    && categoria != 'L'
+                    && categoria != 'V');
+
+            double custo;
+
+            if (preco <= 20.00) {
+                if (categoria == 'A') {
+                    custo = 2.00;
+                } else if (categoria == 'L') {
+                    custo = 3.00;
+                } else {
+                    custo = 4.00;
+                }
+            } else if (preco <= 50.00) {
+                if (refrigeracao == 'S') {
+                    custo = 6.00;
+                } else {
+                    custo = 0.00;
+                }
+            } else {
+                if (refrigeracao == 'S') {
+                    if (categoria == 'A') {
+                        custo = 5.00;
+                    } else if (categoria == 'L') {
+                        custo = 2.00;
+                    } else {
+                        custo = 4.00;
+                    }
+                } else {
+                    if (categoria == 'L') {
+                        custo = 1.00;
+                    } else {
+                        custo = 0.00;
+                    }
+                }
+            }
+
+            double imposto;
+
+            if (categoria == 'A' && refrigeracao == 'S') {
+                imposto = preco * 0.04;
+            } else {
+                imposto = preco * 0.02;
+            }
+
+            double precoFinal = preco + custo + imposto;
+
+            String classificacao;
+
+            if (precoFinal <= 20.00) {
+                classificacao = "Barato";
+                baratos++;
+            } else if (precoFinal <= 100.00) {
+                classificacao = "Normal";
+                normais++;
+            } else {
+                classificacao = "Caro";
+                caros++;
+            }
+
+            System.out.printf(Locale.US,
+                    "Preço unitário: R$ %.2f%n", preco);
+
+            System.out.printf(Locale.US,
+                    "Custo de estocagem: R$ %.2f%n", custo);
+
+            System.out.printf(Locale.US,
+                    "Imposto: R$ %.2f%n", imposto);
+
+            System.out.printf(Locale.US,
+                    "Preço final: R$ %.2f%n", precoFinal);
+
+            System.out.println("Classificação: " + classificacao);
+
+            somaAdicionais += custo + imposto;
+            somaImpostos += imposto;
+
+            if (i == 1 || precoFinal > maiorFinal) {
+                maiorFinal = precoFinal;
+            }
+
+            if (i == 1 || precoFinal < menorFinal) {
+                menorFinal = precoFinal;
+            }
+        }
+
+        System.out.printf(Locale.US,
+                "%nMédia dos valores adicionais: R$ %.2f%n",
+                somaAdicionais / 12.0);
+
+        System.out.printf(Locale.US,
+                "Maior preço final: R$ %.2f%n", maiorFinal);
+
+        System.out.printf(Locale.US,
+                "Menor preço final: R$ %.2f%n", menorFinal);
+
+        System.out.printf(Locale.US,
+                "Total de impostos: R$ %.2f%n", somaImpostos);
+
+        System.out.println("Quantidade de produtos baratos: " + baratos);
+        System.out.println("Quantidade de produtos normais: " + normais);
+        System.out.println("Quantidade de produtos caros: " + caros);
+
+        entrada.close();
+    }
+}
