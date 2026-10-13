@@ -1,0 +1,57 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+
+    public static double fatorial(int n) {
+        double resultado = 1.0;
+
+        for (int i = 2; i <= n; i++) {
+            resultado *= i;
+        }
+
+        return resultado;
+    }
+
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int n;
+
+        do {
+            System.out.print("Quantidade de termos da série: ");
+            n = entrada.nextInt();
+        } while (n <= 0);
+
+        double x;
+
+        do {
+            System.out.print("Digite um valor positivo para X: ");
+            x = entrada.nextDouble();
+        } while (x <= 0);
+
+        int[] denominadores = {1, 2, 3, 4, 3, 2};
+        double soma = 0.0;
+
+        for (int i = 1; i <= n; i++) {
+            int expoente = i + 1;
+            int fatorialDenominador =
+                    denominadores[(i - 1) % denominadores.length];
+
+            double termo =
+                    Math.pow(x, expoente) / fatorial(fatorialDenominador);
+
+            if (i % 2 == 1) {
+                termo = -termo;
+            }
+
+            soma += termo;
+        }
+
+        System.out.printf(Locale.US, "S = %.6f%n", soma);
+
+        entrada.close();
+    }
+}
