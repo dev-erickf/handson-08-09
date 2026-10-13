@@ -1,0 +1,61 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int quantidade;
+
+        do {
+            System.out.print("Quantidade de crianças pesquisadas: ");
+            quantidade = entrada.nextInt();
+        } while (quantidade <= 0);
+
+        int femininas = 0;
+        int masculinas = 0;
+        int ate24Meses = 0;
+
+        for (int i = 1; i <= quantidade; i++) {
+            char sexo;
+
+            do {
+                System.out.print("Sexo da criança " + i + " (M/F): ");
+                sexo = entrada.next().toUpperCase().charAt(0);
+            } while (sexo != 'M' && sexo != 'F');
+
+            int meses;
+
+            do {
+                System.out.print("Tempo de vida em meses: ");
+                meses = entrada.nextInt();
+            } while (meses < 0);
+
+            if (sexo == 'F') {
+                femininas++;
+            } else {
+                masculinas++;
+            }
+
+            if (meses <= 24) {
+                ate24Meses++;
+            }
+        }
+
+        System.out.printf(Locale.US,
+                "Percentual de crianças do sexo feminino: %.2f%%%n",
+                femininas / (double) quantidade * 100);
+
+        System.out.printf(Locale.US,
+                "Percentual de crianças do sexo masculino: %.2f%%%n",
+                masculinas / (double) quantidade * 100);
+
+        System.out.printf(Locale.US,
+                "Percentual de crianças que viveram 24 meses ou menos: %.2f%%%n",
+                ate24Meses / (double) quantidade * 100);
+
+        entrada.close();
+    }
+}
