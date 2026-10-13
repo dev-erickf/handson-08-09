@@ -1,0 +1,36 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int n;
+
+        do {
+            System.out.print("Quantos termos deseja mostrar? ");
+            n = entrada.nextInt();
+        } while (n <= 0);
+
+        long primeiro = 0;
+        long segundo = 1;
+
+        for (int i = 1; i <= n; i++) {
+            System.out.print(primeiro);
+
+            if (i < n) {
+                System.out.print(" ");
+            }
+
+            long proximo = primeiro + segundo;
+
+            primeiro = segundo;
+            segundo = proximo;
+        }
+
+        System.out.println();
+
+        entrada.close();
+    }
+}
