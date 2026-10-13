@@ -1,0 +1,36 @@
+package atividade.rafaela;
+
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        for (int i = 1; i <= 75; i++) {
+            System.out.print("Matrícula do aluno " + i + ": ");
+            int matricula = entrada.nextInt();
+
+            System.out.print("Nota final: ");
+            double nota = entrada.nextDouble();
+
+            char conceito;
+
+            if (nota > 9) {
+                conceito = 'A';
+            } else if (nota >= 7) {
+                conceito = 'B';
+            } else if (nota >= 5) {
+                conceito = 'C';
+            } else {
+                conceito = 'D';
+            }
+
+            System.out.println("Matrícula: " + matricula);
+            System.out.println("Nota final: " + nota);
+            System.out.println("Conceito: " + conceito);
+            System.out.println();
+        }
+
+        entrada.close();
+    }
+}
