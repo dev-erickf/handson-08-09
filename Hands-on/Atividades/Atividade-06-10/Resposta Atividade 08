@@ -1,0 +1,27 @@
+package atividade.rafaela;
+
+import java.util.Locale;
+
+public class Main {
+    public static void main(String[] args) {
+        int chico = 150;
+        int ze = 110;
+        int anos = 0;
+
+        while (ze <= chico) {
+            chico += 2;
+            ze += 3;
+            anos++;
+        }
+
+        System.out.println("Anos necessários: " + anos);
+
+        System.out.printf(Locale.US,
+                "Altura final de Chico: %.2f m%n",
+                chico / 100.0);
+
+        System.out.printf(Locale.US,
+                "Altura final de Zé: %.2f m%n",
+                ze / 100.0);
+    }
+}
