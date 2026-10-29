@@ -1,0 +1,56 @@
+package atividade.rafaela;
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner entrada = new Scanner(System.in);
+
+        int[] numeros = new int[8];
+        int[] positivos = new int[8];
+        int[] negativos = new int[8];
+
+        int qtdPositivos = 0;
+        int qtdNegativos = 0;
+
+        for (int i = 0; i < numeros.length; i++) {
+            System.out.print("Digite o " + (i + 1) + "º numero: ");
+            numeros[i] = entrada.nextInt();
+        }
+
+        for (int i = 0; i < numeros.length; i++) {
+            if (numeros[i] > 0) {
+                positivos[qtdPositivos] = numeros[i];
+                qtdPositivos++;
+            } else if (numeros[i] < 0) {
+                negativos[qtdNegativos] = numeros[i];
+                qtdNegativos++;
+            }
+        }
+
+        System.out.print("Vetor de positivos: [");
+
+        for (int i = 0; i < qtdPositivos; i++) {
+            System.out.print(positivos[i]);
+
+            if (i < qtdPositivos - 1) {
+                System.out.print(", ");
+            }
+        }
+
+        System.out.println("]");
+
+        System.out.print("Vetor de negativos: [");
+
+        for (int i = 0; i < qtdNegativos; i++) {
+            System.out.print(negativos[i]);
+
+            if (i < qtdNegativos - 1) {
+                System.out.print(", ");
+            }
+        }
+
+        System.out.println("]");
+
+        entrada.close();
+    }
+}
